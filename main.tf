@@ -52,6 +52,9 @@ resource "aws_internet_gateway" "igw" {
     Name = "${var.envname}-igw"
   }
 }
+resource "aws_eip" "natgw" {
+  vpc = true
+}
 
 #eip
 resource "aws_eip" "natgw" {
